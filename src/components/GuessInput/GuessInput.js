@@ -1,6 +1,6 @@
 import React from 'react'
 
-function GuessInput({ guesses, setGuesses }) {
+function GuessInput({ guesses, setGuesses, gameOver }) {
   const [guess, setGuess] = React.useState('')
 
   const handleSubmit = (e) => {
@@ -24,6 +24,7 @@ function GuessInput({ guesses, setGuesses }) {
         maxLength={5}
         value={guess}
         onChange={(e) => setGuess(e.target.value.toUpperCase())}
+        disabled={gameOver}
       />
     </form>
   )

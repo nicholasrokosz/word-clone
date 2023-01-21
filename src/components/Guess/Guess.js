@@ -1,13 +1,8 @@
 import React from 'react'
 import { checkGuess } from '../../game-helpers'
-import { sample } from '../../utils'
-import { WORDS } from '../../data'
 import { range } from '../../utils'
 
-const answer = sample(WORDS)
-console.log(answer)
-
-function Guess({ guess }) {
+function Guess({ guess, answer }) {
   const gradedGuess = checkGuess(guess, answer)
 
   return (

@@ -3,7 +3,6 @@ export function checkGuess(guess, answer) {
     return null
   }
 
-  console.log(guess)
   const guessChars = guess.toUpperCase().split('')
   const answerChars = answer.split('')
 
