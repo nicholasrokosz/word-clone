@@ -231,6 +231,12 @@ h1 {
   }
 }
 
+.keyboard-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .keyboard {
   width: 295px;
   display: flex;
@@ -242,25 +248,37 @@ h1 {
 .letter {
   width: 24px;
   height: 24px;
-  background-color: #f5f5f5;
+  background-color: #ddd;
   border-radius: 4px;
   text-align: center;
   padding-top: 1px;
 }
 
+/* hacky way to get the third row to look sort of correct */
 .letter:nth-child(20) {
-  margin-left: 22px;
+  margin-left: 20px;
 }
 
 .correct {
   background-color: var(--color-success);
   color: white;
 }
+
 .incorrect {
   background-color: var(--color-gray-300);
   color: white;
 }
+
 .misplaced {
   background-color: var(--color-warning);
   color: white;
+}
+
+.play-again-btn {
+  background-color: white;
+  color: var(--color-success);
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
 }

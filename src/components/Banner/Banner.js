@@ -16,7 +16,9 @@ function Banner({ result, numGuesses, answer, playAgain }) {
           Sorry, the correct answer is <strong>{answer}</strong>
         </p>
       )}
-      <button onClick={playAgain}>play again</button>
+      <button className='play-again-btn' onClick={playAgain}>
+        play again
+      </button>
     </div>
   )
 }
