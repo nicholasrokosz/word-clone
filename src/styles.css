@@ -230,3 +230,36 @@ h1 {
     transform: translateY(0%);
   }
 }
+
+.keyboard {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.letter {
+  width: 24px;
+  height: 24px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 1px;
+}
+
+.letter:nth-child(20) {
+  margin-left: 22px;
+}
+
+.correct {
+  background-color: var(--color-success);
+  color: white;
+}
+.incorrect {
+  background-color: var(--color-gray-300);
+  color: white;
+}
+.misplaced {
+  background-color: var(--color-warning);
+  color: white;
+}

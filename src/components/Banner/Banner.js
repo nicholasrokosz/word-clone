@@ -6,7 +6,10 @@ function Banner({ result, numGuesses, answer }) {
       {result === 'happy' ? (
         <p>
           <strong>Congratulations!</strong> Got it in{' '}
-          <strong>{numGuesses} guesses</strong>.
+          <strong>
+            {numGuesses} {numGuesses === 1 ? 'guess' : 'guesses'}
+          </strong>
+          .
         </p>
       ) : (
         <p>
