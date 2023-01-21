@@ -9,10 +9,8 @@ function GuessInput({ guesses, setGuesses }) {
       window.alert('Guess must be 5 letters long.')
       return
     }
-    // console.log(guess)
-    const newGuesses = [...guesses]
-    newGuesses[newGuesses.indexOf('     ')] = guess
-    setGuesses(newGuesses)
+
+    setGuesses([...guesses, guess])
     setGuess('')
   }
 

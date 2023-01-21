@@ -1,11 +1,20 @@
 import React from 'react'
+import { checkGuess } from '../../game-helpers'
+import { sample } from '../../utils'
+import { WORDS } from '../../data'
+import { range } from '../../utils'
 
-function Guess({ guess, index }) {
+const answer = sample(WORDS)
+console.log(answer)
+
+function Guess({ guess }) {
+  const gradedGuess = checkGuess(guess, answer)
+
   return (
-    <p className='guess' key={index}>
-      {guess.split('').map((char, j) => (
-        <span className='cell' key={j}>
-          {char}
+    <p className='guess'>
+      {(gradedGuess ?? range(0, 5)).map(({ status, letter }, j) => (
+        <span className={`cell ${gradedGuess && status}`} key={j}>
+          {gradedGuess ? letter : ''}
         </span>
       ))}
     </p>
