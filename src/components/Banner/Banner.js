@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Banner({ result, numGuesses, answer }) {
+function Banner({ result, numGuesses, answer, playAgain }) {
   return (
     <div className={`banner ${result}`}>
       {result === 'happy' ? (
@@ -16,6 +16,7 @@ function Banner({ result, numGuesses, answer }) {
           Sorry, the correct answer is <strong>{answer}</strong>
         </p>
       )}
+      <button onClick={playAgain}>play again</button>
     </div>
   )
 }
