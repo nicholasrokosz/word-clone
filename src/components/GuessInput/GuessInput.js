@@ -10,7 +10,9 @@ function GuessInput({ guesses, setGuesses }) {
       return
     }
     // console.log(guess)
-    setGuesses([...guesses, guess])
+    const newGuesses = [...guesses]
+    newGuesses[newGuesses.indexOf('     ')] = guess
+    setGuesses(newGuesses)
     setGuess('')
   }
 
